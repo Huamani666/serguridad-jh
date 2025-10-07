@@ -2,8 +2,12 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads" # Carpeta local donde se guardan las imágenes
-public_folder: "/images/uploads" # Carpeta pública donde se acceden las imágenes
+# Configuración de medios (dónde se guardan las imágenes)
+media_folder: "images/uploads"  # Carpeta local donde se guardan las imágenes
+public_folder: "/images/uploads"  # Carpeta pública para mostrar las imágenes
+
+# Configuración del panel
+publish_mode: editorial_workflow
 
 collections:
   - name: "productos"
@@ -16,4 +20,6 @@ collections:
       - { label: "Categoría", name: "categoria", widget: "select", options: ["Cámaras", "Alarmas", "Cerco Eléctrico"] }
       - { label: "Descripción", name: "description", widget: "text" }
       - { label: "Imagen", name: "image", widget: "image" }
+
+
 
