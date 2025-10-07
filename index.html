@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>JH Seguridad — Soluciones Eléctricas y Sistemas de Seguridad</title>
+  <style>
+    
+    body{font-family:Inter,Arial,sans-serif;background:#0f1724;color:#e6eef6;margin:0}
+    a{text-decoration:none;color:inherit}
+    .container{max-width:1200px;margin:auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+    header img{height:90px;width:auto;filter:drop-shadow(0 0 10px #00bfff);} 
+    nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}
+    section{margin-top:40px}
+    .services,.categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+    .card{background:rgba(255,255,255,0.05);padding:15px;border-radius:12px;text-align:center;transition:transform .2s ease;cursor:pointer}
+    .card:hover{transform:scale(1.03)}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+    .muted{color:#9aa4b2}
+    footer{border-top:1px solid rgba(255,255,255,0.1);margin-top:50px;padding:20px 0;text-align:center;color:#9aa4b2}
+
+    /* Estilos del modal */
+    .modal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.9);padding:40px}
+    .modal-content{max-width:1000px;margin:auto}
+    .modal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+    .modal-item{background:rgba(255,255,255,0.05);border-radius:10px;padding:10px;text-align:center}
+    .modal-item img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:10px}
+    .close{color:#fff;float:right;font-size:30px;font-weight:bold;cursor:pointer}
+    .close:hover{color:#00bfff}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="jh.png" alt="Logo JH Seguridad">
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#productos">Categorías</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="inicio" 
+    style="
+        position: relative;
+        text-align: center;
+        color: #fff;
+        padding: 120px 20px;
+        background: center/cover no-repeat;
+        transition: background-image 1s ease-in-out;
+        ">
+    
+    <div style="
+        position:absolute;
+        top:0; left:0; right:0; bottom:0;
+        background:rgba(0,0,0,0.6);
+        ">
+        </div>
+
+    <div style="position:relative; z-index:1; max-width:800px; margin:auto;">
+        <h2 style="font-size:2.5rem; margin-bottom:15px;">Protege tu hogar y negocio</h2>
+        <p style="font-size:1.2rem; color:#e0e0e0;">
+        Instalación profesional de cámaras, alarmas y cercos eléctricos con la mejor tecnología de seguridad en <strong>tu ciudad</strong>.
+        </p>
+    </div>
+    </section>
+
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+      <div class="services">
+        <div class="card">
+          <h3>Cámaras de seguridad</h3>
+          <p class="muted">Instalación de sistemas CCTV e IP con grabación local o en la nube.</p>
+        </div>
+        <div class="card">
+          <h3>Alarmas</h3>
+          <p class="muted">Instalamos alarmas contra robo e incendio con sensores inteligentes.</p>
+        </div>
+        <div class="card">
+          <h3>Cercos eléctricos</h3>
+          <p class="muted">Protege el perímetro de tu propiedad con cercos eléctricos seguros y duraderos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos">
+      <h2>Categorías</h2>
+      <p class="muted">Explora nuestras categorías para encontrar el producto ideal.</p>
+      <div class="categories">
+        <div class="card" onclick="openModal('modalCamaras')">
+          <img src="camara_1.jpeg" alt="Cámaras de seguridad">
+          <h3>Cámaras de seguridad</h3>
+          <p class="muted">Modelos HD, IP, PTZ y sistemas de monitoreo remoto.</p>
+        </div>
+        <div class="card" onclick="openModal('modalAlarmas')">
+          <img src="camara_2.jpeg" alt="Alarmas">
+          <h3>Alarmas</h3>
+          <p class="muted">Sensores de movimiento, humo y paneles inteligentes.</p>
+        </div>
+        <div class="card" onclick="openModal('modalCercos')">
+          <img src="cerco_1.jpeg" alt="Cerco eléctrico">
+          <h3>Cercos eléctricos</h3>
+          <p class="muted">Energizadores, cables y accesorios de alta durabilidad.</p>
+        </div>
+      </div>
+    </section>
+
+<section id="contacto">
+  <h2>Contáctanos</h2>
+  <p class="muted">Solicita tu visita técnica o más información sobre nuestros productos.</p>
+
+  <div style="margin-top:20px;">
+    <p>📞 <strong>Teléfono:</strong> <a href="tel:+51987654321" style="color:#00bfff;">+51 988 221 906</a></p>
+    <p>💬 <strong>WhatsApp:</strong> 
+      <a href="https://wa.me/qr/VEOXV3CIU5RGE1" target="_blank" style="color:#00bfff;">Enviar mensaje</a>
+    </p>
+    <p>✉️ <strong>Correo:</strong> 
+      <a href="mailto:jhseguridad@gmail.com" style="color:#00bfff;">Jh0777@hotmail.com</a>
+    </p>
+  </div>
+</section>
+
+
+    <footer>
+      <p>© 2025 JH Seguridad — Soluciones Eléctricas y Sistemas de Seguridad</p>
+    </footer>
+  </div>
+
+  <!-- Modal Cámaras -->
+  <div id="modalCamaras" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalCamaras')">&times;</span>
+      <h2>Cámaras de seguridad</h2>
+      <div class="modal-grid">
+        <div class="modal-item"><img src="camara_3.jpeg" alt="Cámara HD"><p>Cámara HD 1080p</p></div>
+        <div class="modal-item"><img src="camara_3.jpeg" alt="Cámara IP"><p>Cámara IP WiFi</p></div>
+        <div class="modal-item"><img src="camara_3.jpeg" alt="Cámara PTZ"><p>Cámara PTZ 360°</p></div>
+        <div class="modal-item"><img src="camara_3.jpeg" alt="DVR"><p>Grabador DVR 4 Canales</p></div>
+        <div class="modal-item"><img src="camara_3.jpeg" alt="Cámara Exterior"><p>Cámara Exterior IR</p></div>
+        <div class="modal-item"><img src="camara_3.jpeg" alt="Kit CCTV"><p>Kit CCTV completo</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Alarmas -->
+  <div id="modalAlarmas" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalAlarmas')">&times;</span>
+      <h2>Alarmas</h2>
+      <div class="modal-grid">
+        <div class="modal-item"><img src="sistema-de-alarmas_800x534.webp" alt="Sensor Movimiento"><p>Sensor de movimiento PIR</p></div>
+        <div class="modal-item"><img src="sistema-de-alarmas_800x534.webp" alt="Panel Alarma"><p>Panel central de alarma</p></div>
+        <div class="modal-item"><img src="sistema-de-alarmas_800x534.webp" alt="Sirena"><p>Sirena con luz estroboscópica</p></div>
+        <div class="modal-item"><img src="sistema-de-alarmas_800x534.webp" alt="Detector Humo"><p>Detector de humo</p></div>
+        <div class="modal-item"><img src="sistema-de-alarmas_800x534.webp" alt="Control Remoto"><p>Control remoto inalámbrico</p></div>
+        <div class="modal-item"><img src="sistema-de-alarmas_800x534.webp" alt="Sensor Magnético"><p>Sensor magnético de puerta</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Cercos -->
+  <div id="modalCercos" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modalCercos')">&times;</span>
+      <h2>Cercos eléctricos</h2>
+      <div class="modal-grid">
+        <div class="modal-item"><img src="cerco-electrico_800x534.webp" alt="Energizador"><p>Energizador de cerco</p></div>
+        <div class="modal-item"><img src="cerco-electrico_800x534.webp" alt="Aislador"><p>Aisladores de alta tensión</p></div>
+        <div class="modal-item"><img src="cerco-electrico_800x534.webp" alt="Poste"><p>Postes galvanizados</p></div>
+        <div class="modal-item"><img src="cerco-electrico_800x534.webp" alt="Cable"><p>Cable acerado</p></div>
+        <div class="modal-item"><img src="cerco-electrico_800x534.webp" alt="Sirena"><p>Sirena de advertencia</p></div>
+        <div class="modal-item"><img src="cerco-electrico_800x534.webp" alt="Kit Completo"><p>Kit de instalación completa</p></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      // Lista de imágenes para el fondo
+  const images = [
+    "camara-01.jpg",
+    "alarmas_01.jpg",
+    "cerco_01.jpg"
+  ];
+
+  let index = 0;
+  const inicioSection = document.getElementById("inicio");
+
+  // Cambiar la imagen cada 4 segundos
+  function changeBackground() {
+    inicioSection.style.backgroundImage = `url('${images[index]}')`;
+    index = (index + 1) % images.length;
+  }
+
+  // Inicia con la primera imagen y luego cambia cada 4s
+  changeBackground();
+  setInterval(changeBackground, 4000);
+    function openModal(id){document.getElementById(id).style.display='block'}
+    function closeModal(id){document.getElementById(id).style.display='none'}
+    window.onclick=function(e){document.querySelectorAll('.modal').forEach(m=>{if(e.target==m)m.style.display='none'})}
+  </script>
+</body>
+</html>

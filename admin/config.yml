@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads" # Carpeta local donde se guardan las imágenes
+public_folder: "/images/uploads" # Carpeta pública donde se acceden las imágenes
+
+collections:
+  - name: "productos"
+    label: "Productos"
+    folder: "productos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Categoría", name: "categoria", widget: "select", options: ["Cámaras", "Alarmas", "Cerco Eléctrico"] }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Imagen", name: "image", widget: "image" }
+
